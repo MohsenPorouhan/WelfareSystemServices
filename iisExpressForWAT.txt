@@ -1,0 +1,13 @@
+﻿in command prompt:
+cd C:\Program Files\IIS Express 
+iisexpress.exe /path:C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles /vpath:"/ASP.NETWebAdminFiles" /port:8095 /clr:4.0 /ntlm
+in browser:
+http://localhost:8095/asp.netwebadminfiles/default.aspx?applicationPhysicalPath=D:\WelfareSystemServices&applicationUrl=/
+
+
+Instead, you’ll need to generate it with the aspnet_regsql.
+exe command-line tool. Rather than hunt around for this file, the easiest way to launch it is to fire up the Visual
+Studio command prompt (open the Start menu and choose All Programs ➤ Microsoft Visual Studio 2010 ➤
+Visual Studio Tools ➤ Visual Studio Command Prompt). You can then type in commands that use aspnet_regsql.
+you can set up a database that has only the options you’ve decided to use:
+aspnet_regsql -S . -E -d welfareServices -A mr
